@@ -1,11 +1,7 @@
 ﻿namespace Api.Models
 {
-    using System;
-    using System.ComponentModel.DataAnnotations;
-
-    public class Book
+    public class Book : EntityBase
     {
-        [Key] public Guid Identifier { get; set; }
 
         public string Title { get; set; }
 
