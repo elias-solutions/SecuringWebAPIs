@@ -2,6 +2,9 @@
 // All rights reserved to TRUMPF GmbH + Co. KG, Germany.
 // </copyright>
 
+using Auth0.AuthenticationApi;
+using Auth0.ManagementApi;
+
 namespace Client
 {
     using System;
@@ -13,13 +16,17 @@ namespace Client
 
         static async Task Main(string[] args)
         {
-            Console.WriteLine("Enter key to delete:");
-            var identifier = Console.ReadLine();
+            var client = new AuthenticationApiClient(new Uri("https://dev-jonas-elias.eu.auth0.com/"));
+            client.
+    
 
-            var response = await new HttpClientBookStore().DeleteAsync(identifier, TOKEN);
-            Console.WriteLine($"Status-Code {response.StatusCode} for {identifier}");
 
-            Console.WriteLine("Press any key to exit.");
+            //Console.WriteLine("Enter key to delete:");
+            //var identifier = Console.ReadLine();
+
+            //Console.WriteLine($"Status-Code {response.StatusCode} for {identifier}");
+
+            //Console.WriteLine("Press any key to exit.");
             Console.ReadLine();
         }
     }

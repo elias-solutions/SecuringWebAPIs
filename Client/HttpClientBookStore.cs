@@ -16,7 +16,7 @@
             _httpClient = new HttpClient {BaseAddress = new Uri(URL)};
         }
 
-        public Task DeleteAsync(string identifier, string token)
+        public Task<HttpResponseMessage> DeleteAsync(string identifier, string token)
         {
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Authorization", "Bearer " + token);
             return _httpClient.DeleteAsync($"books/{identifier}");

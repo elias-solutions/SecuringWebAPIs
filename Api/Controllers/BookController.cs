@@ -1,12 +1,12 @@
-﻿namespace Api.Controllers
-{
-    using System;
-    using System.Linq;
-    using Api.Models;
-    using Api.Services;
-    using Microsoft.AspNetCore.Authorization;
-    using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Linq;
+using Api.Models;
+using Api.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
+namespace Api.Controllers
+{
     [ApiController]
     [Route("/api/v1/books")]
     public class BookController : ControllerBase
